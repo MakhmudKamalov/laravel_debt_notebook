@@ -63,7 +63,8 @@ class ClientController extends Controller
         Rule::unique('clients')->ignore($client->id)->where(function ($query) use ($client) {
           return $query->where('phone', '!=', $client->phone);
         })
-      ],      'debt' => 'required|numeric|min:1000'
+      ],     
+       'debt' => 'required|numeric|min:1000'
     ]);
 
 
